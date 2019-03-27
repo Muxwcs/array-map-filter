@@ -59,7 +59,20 @@ En sortie:
 
  */
 
+// function getMoviesFreshness(movies) {
+//   let valeur
+//   return movies.map((mov) => mov.rating < 60 ? (valeur = "rotten"): mov.rating >= 60 && mov.rating <= 75 ? (valeur = "fresh"): mov.rating > 75 ? (valeur = "certified fresh"): (valeur = undefined));
+//     return { ...mov, label: valeur }
+// }
+
 function getMoviesFreshness(movies) {
+  let valeur
+  return movies.map((mov) => {
+    if (mov.rating >= 60 && mov.rating <= 75) { valeur = "fresh" }
+    else if (mov.rating > 75) { valeur = "certified fresh" }
+    else if (mov.rating < 60) { valeur = "rotten" }
+    return { ...mov, label: valeur }
+  })
 }
 
 
