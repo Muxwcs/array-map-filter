@@ -22,6 +22,7 @@ En sortie: [
  */
 
 function getStringsLength(strings) {
+  
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
